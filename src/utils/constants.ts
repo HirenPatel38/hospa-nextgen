@@ -1,18 +1,18 @@
 // ========================================
-// HOSPA Configuration Constants
+// HOSPA NextGen Configuration Constants
 // ========================================
 
-// Hospital Information
-export const HOSPITAL_NAME = "HOSPA";
-export const HOSPITAL_TAGLINE = "Advanced Care. Human at Heart.";
+// Brand Information
+export const HOSPITAL_NAME = "HOSPA NextGen";
+export const HOSPITAL_TAGLINE = "Smarter Care. Better Outcomes.";
 export const HOSPITAL_DESCRIPTION =
-  "Where medical expertise, intelligent technology and compassionate care come together.";
+  "Where clinical expertise, intelligent technology, and patient-first design come together to reshape the healthcare experience.";
 
 // Contact & Emergency
-export const EMERGENCY_PHONE = "EMERGENCY_PHONE";
-export const HOSPITAL_PHONE = "+1 (555) 000-0000";
-export const HOSPITAL_EMAIL = "info@hospa.example.com";
-export const HOSPITAL_ADDRESS = "HOSPITAL_ADDRESS";
+export const EMERGENCY_PHONE = "911";
+export const HOSPITAL_PHONE = "+1 (555) 234-5678";
+export const HOSPITAL_EMAIL = "hello@hospa-nextgen.com";
+export const HOSPITAL_ADDRESS = "1200 Wellness Boulevard, Suite 400, San Francisco, CA 94102";
 
 // Social
 export const SOCIAL_LINKS = {
@@ -25,15 +25,10 @@ export const SOCIAL_LINKS = {
 
 // Navigation
 export const NAV_LINKS = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
   { label: "Departments", path: "/departments" },
   { label: "Doctors", path: "/doctors" },
-  { label: "Diseases", path: "/diseases" },
-  { label: "Anatomy", path: "/anatomy" },
-  { label: "Services", path: "/services" },
   { label: "Health Library", path: "/health-library" },
-  { label: "Appointments", path: "/appointments" },
   { label: "Contact", path: "/contact" },
 ] as const;
 
@@ -56,9 +51,9 @@ export const GENDER_OPTIONS = ["Male", "Female", "Other", "Prefer not to say"] a
 
 // Medical Disclaimer
 export const MEDICAL_DISCLAIMER =
-  "This information is provided for educational purposes and is not a substitute for professional medical advice, diagnosis or treatment.";
+  "This information is provided for educational purposes and is not a substitute for professional medical advice, diagnosis, or treatment.";
 
 // SEO
-export const SITE_TITLE = "HOSPA | Advanced Healthcare & Medical Services";
+export const SITE_TITLE = "HOSPA NextGen | Smarter Care, Better Outcomes";
 export const SITE_DESCRIPTION =
-  "HOSPA is a next-generation healthcare platform offering advanced medical care, expert specialists, and innovative technology.";
+  "HOSPA NextGen is a next-generation healthcare platform offering advanced medical care, expert specialists, and innovative patient-first technology.";

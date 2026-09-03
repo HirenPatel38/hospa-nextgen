@@ -1,11 +1,11 @@
 {
-  "name": "freebuff.com application",
-  "short_name": "freebuff.com",
-  "description": "freebuff.com application",
+  "name": "HOSPA NextGen — Smarter Care, Better Outcomes",
+  "short_name": "HOSPA NextGen",
+  "description": "A next-generation healthcare platform offering advanced medical care, expert specialists, and innovative patient-first technology.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#0d9488",
   "icons": [
     {
       "src": "/logo.png",

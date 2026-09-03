@@ -14,12 +14,21 @@ const Landing = lazy(() => import("./pages/Landing.tsx"));
 const AuthPage = lazy(() => import("./pages/Auth.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const Departments = lazy(() => import("./pages/Departments.tsx"));
+const DepartmentDetail = lazy(() => import("./pages/DepartmentDetail.tsx"));
+const Doctors = lazy(() => import("./pages/Doctors.tsx"));
+const DoctorDetail = lazy(() => import("./pages/DoctorDetail.tsx"));
+const Services = lazy(() => import("./pages/Services.tsx"));
+const HealthLibrary = lazy(() => import("./pages/HealthLibrary.tsx"));
+const Appointments = lazy(() => import("./pages/Appointments.tsx"));
+const Contact = lazy(() => import("./pages/Contact.tsx"));
+const SearchPage = lazy(() => import("./pages/Search.tsx"));
 
 // Simple loading fallback for route transitions
 function RouteLoading() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-pulse text-muted-foreground">Loading...</div>
+      <div className="animate-pulse text-slate-400">Loading...</div>
     </div>
   );
 }
@@ -61,14 +70,14 @@ class RootErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-background text-foreground p-6">
+        <div className="min-h-screen flex items-center justify-center bg-white text-slate-900 p-6">
           <div className="max-w-lg text-center">
             <p className="text-sm font-semibold">Preview runtime error</p>
-            <p className="mt-2 text-xs text-muted-foreground break-words">
+            <p className="mt-2 text-xs text-slate-500 break-words">
               {this.state.message}
             </p>
             {this.state.stack && (
-              <pre className="mt-3 text-left text-[10px] leading-4 text-muted-foreground/80 max-h-40 overflow-auto rounded border border-border/60 p-2">
+              <pre className="mt-3 text-left text-[10px] leading-4 text-slate-400 max-h-40 overflow-auto rounded border border-slate-200 p-2">
                 {this.state.stack}
               </pre>
             )}
@@ -81,8 +90,6 @@ class RootErrorBoundary extends React.Component<
 }
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
-
-
 
 function RouteSyncer() {
   const location = useLocation();
@@ -106,7 +113,6 @@ function RouteSyncer() {
 
   return null;
 }
-
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -132,6 +138,15 @@ createRoot(document.getElementById("root")!).render(
                   </RequireAuth>
                 }
               />
+              <Route path="/departments" element={<Departments />} />
+              <Route path="/departments/:slug" element={<DepartmentDetail />} />
+              <Route path="/doctors" element={<Doctors />} />
+              <Route path="/doctors/:slug" element={<DoctorDetail />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/health-library" element={<HealthLibrary />} />
+              <Route path="/appointments" element={<Appointments />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/search" element={<SearchPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
